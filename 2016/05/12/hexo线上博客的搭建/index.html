@@ -28,7 +28,8 @@
 <meta property="og:image" content="http://i2.buimg.com/770899c602b42250.png">
 <meta property="og:image" content="http://i3.buimg.com/0ae71cc105ec62a0.png">
 <meta property="og:image" content="http://i3.buimg.com/53114ecd892377cf.png">
-<meta property="og:updated_time" content="2016-05-12T09:59:40.000Z">
+<meta property="og:image" content="http://i4.buimg.com/ba2749c5ad5662a9.png">
+<meta property="og:updated_time" content="2016-05-12T13:34:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo线上博客的搭建">
 <meta name="twitter:description" content="####搭建本地博客
@@ -123,12 +124,17 @@
 <p>#####3.进入账号，点击右上角的 “+”，找到 new repositories ,然后创建一个仓库</p>
 <p><img src="http://i3.buimg.com/53114ecd892377cf.png" alt=""></p>
 <p>#####4.返回账户主页，点击你的头像，点击setting，在setting选项中点击SSH and GPG keys，然后点击 New ssh key;<br>！<a href="http://i2.buimg.com/8adfa4699832e7e5.png" target="_blank" rel="external"></a></p>
-<p>#####5.在title中</p>
+<p>#####5.在终端中输入 git clone 仓库地址<br>用来下载线上仓库地址</p>
+<p>#####6.在终端中输入vim ~/.ssh/id_rsa.pub 会出现一段长代码，将代码复制进去ssh key中的key中（退出为shift+：，然后输入q再点击空格），点击创建ssh key  </p>
+<p>#####7.在终端中输入$ git config –global user.name “Your Name”和$ git config –global user.email “email@example.com”来配置你的账户名和邮箱</p>
+<p>#####8.打开myblog下的_config.yml,输入信息如下：<br><img src="http://i4.buimg.com/ba2749c5ad5662a9.png" alt=""></p>
+<p>#####9.使用终端在myblog文件夹下输入 hexo g  和hexo d   (如果出现错误，输入 npm install hexo-deployer-git –save)</p>
+<p>#####10.在浏览器地址栏输入用户名.github.io进入线上博客</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/hexo线上博客的搭建/" data-id="cio4blib60001eeie29xkxgxr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/hexo线上博客的搭建/" data-id="cio4c6q2t0000g0iez6e54k2u" class="article-share-link">Share</a>
       
       
     </footer>
