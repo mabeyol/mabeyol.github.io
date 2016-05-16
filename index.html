@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -243,6 +243,119 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/16/gulp详解/" itemprop="url">
+                  gulp合并，压缩js文件的傻瓜式教学
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-16T19:11:18+08:00" content="2016-05-16">
+              2016-05-16
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>####1.创建项目文件夹 myGulp，然后进入myGulp，</p>
+<p>####2.下载安装 gulp（在终端输入npm install gulp ）即可完成安装,然后初始化文件夹（npm init）</p>
+<p><img src="http://i2.buimg.com/b545d0d44ffdd4f8.png" alt=""></p>
+<p><img src="http://i2.buimg.com/947e83aeb0fdd7ae.png" alt=""></p>
+<p>####3.在项目文件夹新建gulpfile.js文件，在建作为例子展示的两个js文件a.js和b.js</p>
+<p>####4.本次主要演示如何将多个js文件合并为一个js文件以及压缩js代码，所以安装两个插件gulp-concat（</p>
+<p>合并js文件）和gulp-jsmin（压缩js文件），在终端输入npm install gulp-concat </p>
+<p>–save-dev和npm install gulp-jsmin –save-dev安装两个插件</p>
+<p><img src="http://i2.buimg.com/7f68e3e94489221f.png" alt=""></p>
+<p><img src="http://i2.buimg.com/e65545c78ecb29d6.png" alt=""></p>
+<p>将a.js和b.js放进js文件夹中，此时myGulp文件中文件详情如下：</p>
+<p><img src="http://i4.buimg.com/da540bde373515ef.png" alt=""></p>
+<p>1<a href="http://i2.buimg.com/c339141bdc37c387.png" target="_blank" rel="external"></a></p>
+<p>####5.配置gulpfile.js文件</p>
+<p><img src="http://i4.buimg.com/1e263eae9c55bbd1.png" alt=""></p>
+<p>####6.在终端输入gulp 任务名,运行</p>
+<p><img src="http://i4.buimg.com/6618bd1453cd0614.png" alt=""></p>
+<p>####7.查看结果</p>
+<p><img src="http://i2.buimg.com/67137c9b4a04ca7b.png" alt=""></p>
+<p><img src="http://i2.buimg.com/b69f97fa45794fae.png" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/16/伪元素详解/" itemprop="url">
                   伪元素详解
                 </a>
@@ -256,7 +369,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-16T16:32:43+08:00" content="2016-05-16">
               2016-05-16
             </time>
@@ -366,7 +479,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-12T09:50:34+08:00" content="2016-05-12">
               2016-05-12
             </time>
@@ -479,7 +592,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-05-11T20:51:26+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -604,8 +717,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -614,8 +727,8 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">tags</span>
               </a>
             </div>
           
@@ -659,7 +772,7 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
