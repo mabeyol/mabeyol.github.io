@@ -468,6 +468,124 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/12/hexo线上博客的搭建/" itemprop="url">
+                  hexo线上博客的搭建
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-12T09:50:34+08:00" content="2016-05-12">
+              2016-05-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>####搭建本地博客</p>
+<ol>
+<li><p>安装hexo</p>
+</li>
+<li><p>创建一个文件夹，命名为myblog</p>
+</li>
+<li><p>在终端进入myblog文件夹，输入 hexo init 初始化文件夹，文件夹中文件如下：<br><img src="http://i2.buimg.com/9db467488efc5657.png" alt=""></p>
+</li>
+</ol>
+<p>4.在终端中输入   hexo new “我的第一篇博客”  创建新博客；删除博客直接在根目录下删除就可以</p>
+<p><img src="http://i2.buimg.com/2d7e0eb33c2af60d.png" alt=""></p>
+<p>5.用submit或markdown对博客内容进行修改，然后在终端输入 hexo server ，打开命令行中的链接，就可查看本地博客myblog<br><img src="http://i2.buimg.com/770899c602b42250.png" alt=""></p>
+<p>####使用github</p>
+<p>1.打开浏览器，在地址栏输入github.com，进入github官网</p>
+<p>2.在官网上注册一个github账号</p>
+<p><img src="http://i3.buimg.com/0ae71cc105ec62a0.png" alt=""></p>
+<p>3.进入账号，点击右上角的 “+”，找到 new repositories ,然后创建一个仓库</p>
+<p><img src="http://i3.buimg.com/53114ecd892377cf.png" alt=""></p>
+<p>4.返回账户主页，点击你的头像，点击setting，在setting选项中点击SSH and GPG keys，然后点击 New ssh key;<br><img src="http://i2.buimg.com/8adfa4699832e7e5.png" alt=""></p>
+<p>5.在终端中输入 git clone 仓库地址<br>用来下载线上仓库地址</p>
+<p>6.在终端中输入vim ~/.ssh/id_rsa.pub 会出现一段长代码，将代码复制进去ssh key中的key中（退出为shift+：，然后输入q再点击空格），点击创建ssh key  </p>
+<p>7.在终端中输入$ git config –global user.name “Your Name”和$ git config –global user.email “email@example.com”来配置你的账户名和邮箱</p>
+<p>8.打开myblog下的_config.yml,输入信息如下：<br><img src="http://i4.buimg.com/ba2749c5ad5662a9.png" alt=""></p>
+<p>9.使用终端在myblog文件夹下输入 hexo g  和hexo d   (如果出现错误，输入 npm install hexo-deployer-git –save)</p>
+<p>10.在浏览器地址栏输入用户名.github.io进入线上博客</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/11/nodeJs操作命令/" itemprop="url">
                   nodeJs操作命令
                 </a>
@@ -606,7 +724,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
