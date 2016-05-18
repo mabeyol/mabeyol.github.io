@@ -243,6 +243,184 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/18/bootstrap应用(一)/" itemprop="url">
+                  bootstrap应用（一） 
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-18T16:57:31+08:00" content="2016-05-18">
+              2016-05-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="bootstrap下载与引入"><a href="#bootstrap下载与引入" class="headerlink" title="bootstrap下载与引入"></a>bootstrap下载与引入</h3><h4 id="下载："><a href="#下载：" class="headerlink" title="下载："></a>下载：</h4><p>需要到bootstrap官方网站进行下载</p>
+<p>bootstrap中文官方网站：<a href="http://v3.bootcss.com" target="_blank" rel="external">http://v3.bootcss.com</a></p>
+<h4 id="引入："><a href="#引入：" class="headerlink" title="引入："></a>引入：</h4><p>！！！使用bootstrap之前必须先引入jQuery文件</p>
+<ol>
+<li><p>从本地引入bootstrap</p>
+</li>
+<li><p>从线上直接引入</p>
+</li>
+</ol>
+<p><img src="http://i4.buimg.com/ee7debe4190aa0ea.png" alt=""></p>
+<h4 id="bootstrap基本样式"><a href="#bootstrap基本样式" class="headerlink" title="bootstrap基本样式"></a>bootstrap基本样式</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+      &lt;head&gt;
+           &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --&gt;
+        &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+
+          &lt;!-- Bootstrap --&gt;
+        &lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;
+        &lt;!-- WARNING: Respond.js doesn&apos;t work if you view the page via file:// --&gt;
+        &lt;!--[if lt IE 9]&gt;
+         &lt;script src=&quot;//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;//cdn.bootcss.com/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
+        &lt;![endif]--&gt;
+     &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;你好，世界！&lt;/h1&gt;
+        &lt;!-- jQuery (necessary for Bootstrap&apos;s JavaScript plugins) --&gt;
+        &lt;script src=&quot;//cdn.bootcss.com/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+        &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+      &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="bootstrap应用"><a href="#bootstrap应用" class="headerlink" title="bootstrap应用"></a>bootstrap应用</h2><h3 id="全局样式"><a href="#全局样式" class="headerlink" title="全局样式"></a>全局样式</h3><ol>
+<li><p>移除了body的margin声明</p>
+</li>
+<li><p>设置body的背景色为白色</p>
+</li>
+<li><p>为排版设置了基本的字体、字号和行高</p>
+</li>
+<li><p>设置了全局连接颜色，且当连接处于悬浮 “:hover”状态时才会显示下滑线样式</p>
+</li>
+</ol>
+<h3 id="标题样式"><a href="#标题样式" class="headerlink" title="标题样式"></a>标题样式</h3><h4 id="重置了h1-h6的默认样式"><a href="#重置了h1-h6的默认样式" class="headerlink" title="重置了h1-h6的默认样式"></a>重置了h1-h6的默认样式</h4><p>1.重新设置了margin-top和margin-bottom的值。h1-h3重置后的值都是20px；h4-h6充值后的值都是10px</p>
+<p>2.所有标题的行高都是1.1（也就是font-size的1.1倍），而且文本颜色和字体都继承父元素的颜色和字体</p>
+<p>3.固定不同级别标题字体大小：h1=36px，h2=30px，h3=24px，h4=18px，h5=14px和h6=12px</p>
+<h4 id="标题类名"><a href="#标题类名" class="headerlink" title="标题类名"></a>标题类名</h4><p>标题类(.h1-.h6),向块级元素添加该类名后，可以让该块元素得到标题样式</p>
+<h4 id="副标题small"><a href="#副标题small" class="headerlink" title="副标题small"></a>副标题small</h4><pre><code>&lt;h1&gt;Bootstrap标题一&lt;small&gt;我是副标题&lt;/small&gt;&lt;/h1&gt;
+</code></pre><p>small标签可以配合标题标签使用，使small标签里的文字成为副标签</p>
+<h3 id="强调内容"><a href="#强调内容" class="headerlink" title="强调内容"></a>强调内容</h3><p>1.强调标签：</p>
+<p>①.lead 一般配合段落使用</p>
+<p>②small标签</p>
+<p>③加粗 strong标签 b标签</p>
+<p>④斜体 em标签 i标签 cite标签</p>
+<p>2.强调相关的类：</p>
+<pre><code>text-muted：提示，使用浅灰色（#999）
+text-primary：主要，使用蓝色（#428bca）
+text-success：成功，使用浅绿色(#3c763d)
+text-info：通知信息，使用浅蓝色（#31708f）
+text-warning：警告，使用黄色（#8a6d3b）
+text-danger：危险，使用褐色（#a94442）
+</code></pre><h3 id="文本对齐风格"><a href="#文本对齐风格" class="headerlink" title="文本对齐风格"></a>文本对齐风格</h3><pre><code>text-danger：危险，使用褐色（#a94442）
+text-left：左对齐
+text-center：居中对齐
+text-right：右对齐
+text-justify：两端对齐
+</code></pre><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>1.ul,ol样式清除:添加list-unstyled类</p>
+<p>2.ul,ol水平列表:添加list-inline类</p>
+<p>把垂直列表换成水平列表,而且去掉项目符号（编号）,保持水平显示</p>
+<p>3.dl水平列表:添加dl-horizontal类</p>
+<p>屏幕大于768px的时候,添加类名”.dl-horizontal”才具有水平定义列表的效果</p>
+<h3 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h3><p>！！！不管使用哪种代码风格，在代码中碰到小于号(&lt;)要使用硬编码”&lt;”来替代,大于号(&gt;)使用”&gt;”来替代</p>
+<p>1.code:一般针对于单个单词或单个句子的代码</p>
+<p>2.pre:一般是针对于多行代码(也就是成块的代码)</p>
+<h3 id="图片样式"><a href="#图片样式" class="headerlink" title="图片样式"></a>图片样式</h3><p>1.img-responsive:响应式图片，主要针对于响应式设计</p>
+<p>2.img-rounded:圆角图片</p>
+<p>3.img-circle:圆型图片</p>
+<p>4.img-thumbnail:缩略图片</p>
+<h3 id="图标样式"><a href="#图标样式" class="headerlink" title="图标样式"></a>图标样式</h3><p>1.任何元素都可以作为图标的容器，通常使用span标签做图标容器</p>
+<p>2.bootstrap框架中为大家提供了近200个不同的icon图片，网址为<a href="http://getbootstrap.com/components/#glyphicons" target="_blank" rel="external">http://getbootstrap.com/components/#glyphicons</a></p>
+<p>3.bootstrap框架中是通过给元素加类名来实现的，格式为class:”glyphic 图标名” </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/17/jade模板详解/" itemprop="url">
                   jade模板详解
                 </a>
@@ -287,25 +465,25 @@
       
         
           
-            <p>##jade<br>Jade 是一个高性能的模板引擎，它深受 Haml 影响，它是用 JavaScript 实现的，并且可以供 Node 使用。</p>
-<p>###jade语法<br>以p标签为例，其中的</p>
+            <h2 id="jade"><a href="#jade" class="headerlink" title="jade"></a>jade</h2><p>Jade 是一个高性能的模板引擎，它深受 Haml 影响，它是用 JavaScript 实现的，并且可以供 Node 使用。</p>
+<h3 id="jade语法"><a href="#jade语法" class="headerlink" title="jade语法"></a>jade语法</h3><p>以p标签为例，其中的</p>
 <p><img src="http://i2.buimg.com/2c93be00dcb4be9b.png" alt=""></p>
 <p>会被转化为</p>
 <p><img src="http://i2.buimg.com/c8c55754e1b55781.jpg" alt=""></p>
 <p>jade还能自动识别自闭标签</p>
-<p>###文本添加<br>在标签里添加文本</p>
+<h3 id="文本添加"><a href="#文本添加" class="headerlink" title="文本添加"></a>文本添加</h3><p>在标签里添加文本</p>
 <p><img src="http://i2.buimg.com/cea57f6abd21d003.png" alt=""></p>
 <p>会转化为</p>
 <p><img src="http://i2.buimg.com/a2f932f72ec54f93.png" alt=""></p>
-<p>###标签嵌套<br>例如下图的</p>
+<h3 id="标签嵌套"><a href="#标签嵌套" class="headerlink" title="标签嵌套"></a>标签嵌套</h3><p>例如下图的</p>
 <p><img src="http://i2.buimg.com/4b2332188a7208a3.png" alt=""></p>
 <p>会被转化为</p>
 <p><img src="http://i2.buimg.com/a18c275e37a2570d.png" alt=""></p>
-<p>###标签添加属性<br>在（）里填写标签属性</p>
+<h3 id="标签添加属性"><a href="#标签添加属性" class="headerlink" title="标签添加属性"></a>标签添加属性</h3><p>在（）里填写标签属性</p>
 <p><img src="http://i2.buimg.com/56d6937ea2a47151.png" alt=""></p>
 <p>转化为</p>
 <p><img src="http://i2.buimg.com/d2bb5bbd7bbb2bd7.png" alt=""></p>
-<p>###标签添加class，id<br>直接在标签后写上需要添加的标签名和类名即可</p>
+<h3 id="标签添加class，id"><a href="#标签添加class，id" class="headerlink" title="标签添加class，id"></a>标签添加class，id</h3><p>直接在标签后写上需要添加的标签名和类名即可</p>
 <p><img src="http://i2.buimg.com/168ad80e38e01ac4.png" alt=""></p>
 <p>转化为</p>
 <p><img src="http://i2.buimg.com/4d2505f00aaf4f38.png" alt=""></p>
@@ -519,20 +697,15 @@
             <h3 id="CSS伪元素"><a href="#CSS伪元素" class="headerlink" title="CSS伪元素"></a>CSS伪元素</h3><p> CSS伪元素用于像某些选择器设置特殊效果</p>
 <p>伪元素语法：selector::first-line{ background:red; }</p>
 <p> 常用的伪元素：::before , ::after , ::first-line , ::first-letter , ::selector</p>
-<p>###::before和::after伪元素</p>
-<p>::before是在元素之前添加内容，::after是在元素之后添加内容</p>
+<h3 id="before和-after伪元素"><a href="#before和-after伪元素" class="headerlink" title="::before和::after伪元素"></a>::before和::after伪元素</h3><p>::before是在元素之前添加内容，::after是在元素之后添加内容</p>
 <p>必须要添加content属性，无论伪元素是否有内容</p>
-<p>####::before语法:</p>
-<p><img src="http://i2.buimg.com/d277cebb217fe9fc.png" alt=""></p>
-<p>####::after语法:</p>
-<p><img src="http://i2.buimg.com/e96160bd0873397b.png" alt=""></p>
-<p>###::first-line伪元素</p>
-<p>选择元素的首行，并为其设置样式</p>
+<h4 id="before语法"><a href="#before语法" class="headerlink" title="::before语法:"></a>::before语法:</h4><p><img src="http://i2.buimg.com/d277cebb217fe9fc.png" alt=""></p>
+<h4 id="after语法"><a href="#after语法" class="headerlink" title="::after语法:"></a>::after语法:</h4><p><img src="http://i2.buimg.com/e96160bd0873397b.png" alt=""></p>
+<h3 id="first-line伪元素"><a href="#first-line伪元素" class="headerlink" title="::first-line伪元素"></a>::first-line伪元素</h3><p>选择元素的首行，并为其设置样式</p>
 <p>可使用属性:字体属性,颜色属性,背景属性,world-spacing,letter-spacing,text-decoration,vertical-align, text-transform,line-height,clear</p>
 <p>::first-line语法:</p>
 <p><img src="http://i2.buimg.com/c842236576f97a01.png" alt=""></p>
-<p>###::first-letter伪元素</p>
-<p>选择每个元素的首字母，并为其设置样式</p>
+<h3 id="first-letter伪元素"><a href="#first-letter伪元素" class="headerlink" title="::first-letter伪元素"></a>::first-letter伪元素</h3><p>选择每个元素的首字母，并为其设置样式</p>
 <p>::first-letter语法:</p>
 <p><img src="http://i2.buimg.com/53fd274c5d5c755a.png" alt=""></p>
 
@@ -628,8 +801,7 @@
       
         
           
-            <p>####搭建本地博客</p>
-<ol>
+            <h4 id="搭建本地博客"><a href="#搭建本地博客" class="headerlink" title="搭建本地博客"></a>搭建本地博客</h4><ol>
 <li><p>安装hexo</p>
 </li>
 <li><p>创建一个文件夹，命名为myblog</p>
@@ -640,8 +812,7 @@
 <p>4.在终端中输入   hexo new “我的第一篇博客”  创建新博客；删除博客直接在根目录下删除就可以</p>
 <p><img src="http://i2.buimg.com/2d7e0eb33c2af60d.png" alt=""></p>
 <p>5.用submit或markdown对博客内容进行修改，然后在终端输入 hexo server ，打开命令行中的链接，就可查看本地博客myblog<br><img src="http://i2.buimg.com/770899c602b42250.png" alt=""></p>
-<p>####使用github</p>
-<p>1.打开浏览器，在地址栏输入github.com，进入github官网</p>
+<h4 id="使用github"><a href="#使用github" class="headerlink" title="使用github"></a>使用github</h4><p>1.打开浏览器，在地址栏输入github.com，进入github官网</p>
 <p>2.在官网上注册一个github账号</p>
 <p><img src="http://i3.buimg.com/0ae71cc105ec62a0.png" alt=""></p>
 <p>3.进入账号，点击右上角的 “+”，找到 new repositories ,然后创建一个仓库</p>
@@ -754,10 +925,9 @@
 <p>__filename显示当前文件的路径（绝对路径）</p>
 
 <p><img src="http://i2.buimg.com/bdd665d833845875.png" alt=""></p>
-<p>####核心模块<br>querystring   os   fs   util </p>
+<h4 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h4><p>querystring   os   fs   util </p>
 <p>path   vm   net   http   https</p>
-<p>####第三方模块</p>
-<p>require()是引入模块的方法 </p>
+<h4 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h4><p>require()是引入模块的方法 </p>
 
 <p><img src="http://i2.buimg.com/283b5e3c35affb6c.png" alt=""></p>
 <p>moudle.exports是导出模块的方法</p>
@@ -765,7 +935,7 @@
 <p><img src="http://i2.buimg.com/7e275a3549ede246.png" alt=""></p>
 <p>下载npm模块使用：npm install name</p>
 
-<p>####npm的发布<br>1.符合规范的目录需求：</p>
+<h4 id="npm的发布"><a href="#npm的发布" class="headerlink" title="npm的发布"></a>npm的发布</h4><p>1.符合规范的目录需求：</p>
 <p>package.json</p>
 <p>README.md(可选的)</p>
 <p>2.npm 注册：npm adduser</p>
@@ -840,7 +1010,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>

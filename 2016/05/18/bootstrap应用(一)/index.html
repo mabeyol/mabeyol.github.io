@@ -1,0 +1,670 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="bootstrap下载与引入下载：需要到bootstrap官方网站进行下载
+bootstrap中文官方网站：http://v3.bootcss.com
+引入：！！！使用bootstrap之前必须先引入jQuery文件
+
+从本地引入bootstrap
+
+从线上直接引入
+
+
+
+bootstrap基本样式&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;zh-CN&amp;qu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bootstrap应用（一） ">
+<meta property="og:url" content="http://yoursite.com/2016/05/18/bootstrap应用(一)/index.html">
+<meta property="og:site_name" content="纳兹Natsu的博客">
+<meta property="og:description" content="bootstrap下载与引入下载：需要到bootstrap官方网站进行下载
+bootstrap中文官方网站：http://v3.bootcss.com
+引入：！！！使用bootstrap之前必须先引入jQuery文件
+
+从本地引入bootstrap
+
+从线上直接引入
+
+
+
+bootstrap基本样式&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;zh-CN&amp;qu">
+<meta property="og:image" content="http://i4.buimg.com/ee7debe4190aa0ea.png">
+<meta property="og:updated_time" content="2016-05-18T11:24:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bootstrap应用（一） ">
+<meta name="twitter:description" content="bootstrap下载与引入下载：需要到bootstrap官方网站进行下载
+bootstrap中文官方网站：http://v3.bootcss.com
+引入：！！！使用bootstrap之前必须先引入jQuery文件
+
+从本地引入bootstrap
+
+从线上直接引入
+
+
+
+bootstrap基本样式&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;zh-CN&amp;qu">
+<meta name="twitter:image" content="http://i4.buimg.com/ee7debe4190aa0ea.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> bootstrap应用（一）  | 纳兹Natsu的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">纳兹Natsu的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                bootstrap应用（一） 
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-18T16:57:31+08:00" content="2016-05-18">
+              2016-05-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="bootstrap下载与引入"><a href="#bootstrap下载与引入" class="headerlink" title="bootstrap下载与引入"></a>bootstrap下载与引入</h3><h4 id="下载："><a href="#下载：" class="headerlink" title="下载："></a>下载：</h4><p>需要到bootstrap官方网站进行下载</p>
+<p>bootstrap中文官方网站：<a href="http://v3.bootcss.com" target="_blank" rel="external">http://v3.bootcss.com</a></p>
+<h4 id="引入："><a href="#引入：" class="headerlink" title="引入："></a>引入：</h4><p>！！！使用bootstrap之前必须先引入jQuery文件</p>
+<ol>
+<li><p>从本地引入bootstrap</p>
+</li>
+<li><p>从线上直接引入</p>
+</li>
+</ol>
+<p><img src="http://i4.buimg.com/ee7debe4190aa0ea.png" alt=""></p>
+<h4 id="bootstrap基本样式"><a href="#bootstrap基本样式" class="headerlink" title="bootstrap基本样式"></a>bootstrap基本样式</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+      &lt;head&gt;
+           &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --&gt;
+        &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+
+          &lt;!-- Bootstrap --&gt;
+        &lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;
+        &lt;!-- WARNING: Respond.js doesn&apos;t work if you view the page via file:// --&gt;
+        &lt;!--[if lt IE 9]&gt;
+         &lt;script src=&quot;//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;//cdn.bootcss.com/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
+        &lt;![endif]--&gt;
+     &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;你好，世界！&lt;/h1&gt;
+        &lt;!-- jQuery (necessary for Bootstrap&apos;s JavaScript plugins) --&gt;
+        &lt;script src=&quot;//cdn.bootcss.com/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+        &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+      &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="bootstrap应用"><a href="#bootstrap应用" class="headerlink" title="bootstrap应用"></a>bootstrap应用</h2><h3 id="全局样式"><a href="#全局样式" class="headerlink" title="全局样式"></a>全局样式</h3><ol>
+<li><p>移除了body的margin声明</p>
+</li>
+<li><p>设置body的背景色为白色</p>
+</li>
+<li><p>为排版设置了基本的字体、字号和行高</p>
+</li>
+<li><p>设置了全局连接颜色，且当连接处于悬浮 “:hover”状态时才会显示下滑线样式</p>
+</li>
+</ol>
+<h3 id="标题样式"><a href="#标题样式" class="headerlink" title="标题样式"></a>标题样式</h3><h4 id="重置了h1-h6的默认样式"><a href="#重置了h1-h6的默认样式" class="headerlink" title="重置了h1-h6的默认样式"></a>重置了h1-h6的默认样式</h4><p>1.重新设置了margin-top和margin-bottom的值。h1-h3重置后的值都是20px；h4-h6充值后的值都是10px</p>
+<p>2.所有标题的行高都是1.1（也就是font-size的1.1倍），而且文本颜色和字体都继承父元素的颜色和字体</p>
+<p>3.固定不同级别标题字体大小：h1=36px，h2=30px，h3=24px，h4=18px，h5=14px和h6=12px</p>
+<h4 id="标题类名"><a href="#标题类名" class="headerlink" title="标题类名"></a>标题类名</h4><p>标题类(.h1-.h6),向块级元素添加该类名后，可以让该块元素得到标题样式</p>
+<h4 id="副标题small"><a href="#副标题small" class="headerlink" title="副标题small"></a>副标题small</h4><pre><code>&lt;h1&gt;Bootstrap标题一&lt;small&gt;我是副标题&lt;/small&gt;&lt;/h1&gt;
+</code></pre><p>small标签可以配合标题标签使用，使small标签里的文字成为副标签</p>
+<h3 id="强调内容"><a href="#强调内容" class="headerlink" title="强调内容"></a>强调内容</h3><p>1.强调标签：</p>
+<p>①.lead 一般配合段落使用</p>
+<p>②small标签</p>
+<p>③加粗 strong标签 b标签</p>
+<p>④斜体 em标签 i标签 cite标签</p>
+<p>2.强调相关的类：</p>
+<pre><code>text-muted：提示，使用浅灰色（#999）
+text-primary：主要，使用蓝色（#428bca）
+text-success：成功，使用浅绿色(#3c763d)
+text-info：通知信息，使用浅蓝色（#31708f）
+text-warning：警告，使用黄色（#8a6d3b）
+text-danger：危险，使用褐色（#a94442）
+</code></pre><h3 id="文本对齐风格"><a href="#文本对齐风格" class="headerlink" title="文本对齐风格"></a>文本对齐风格</h3><pre><code>text-danger：危险，使用褐色（#a94442）
+text-left：左对齐
+text-center：居中对齐
+text-right：右对齐
+text-justify：两端对齐
+</code></pre><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>1.ul,ol样式清除:添加list-unstyled类</p>
+<p>2.ul,ol水平列表:添加list-inline类</p>
+<p>把垂直列表换成水平列表,而且去掉项目符号（编号）,保持水平显示</p>
+<p>3.dl水平列表:添加dl-horizontal类</p>
+<p>屏幕大于768px的时候,添加类名”.dl-horizontal”才具有水平定义列表的效果</p>
+<h3 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h3><p>！！！不管使用哪种代码风格，在代码中碰到小于号(&lt;)要使用硬编码”&lt;”来替代,大于号(&gt;)使用”&gt;”来替代</p>
+<p>1.code:一般针对于单个单词或单个句子的代码</p>
+<p>2.pre:一般是针对于多行代码(也就是成块的代码)</p>
+<h3 id="图片样式"><a href="#图片样式" class="headerlink" title="图片样式"></a>图片样式</h3><p>1.img-responsive:响应式图片，主要针对于响应式设计</p>
+<p>2.img-rounded:圆角图片</p>
+<p>3.img-circle:圆型图片</p>
+<p>4.img-thumbnail:缩略图片</p>
+<h3 id="图标样式"><a href="#图标样式" class="headerlink" title="图标样式"></a>图标样式</h3><p>1.任何元素都可以作为图标的容器，通常使用span标签做图标容器</p>
+<p>2.bootstrap框架中为大家提供了近200个不同的icon图片，网址为<a href="http://getbootstrap.com/components/#glyphicons" target="_blank" rel="external">http://getbootstrap.com/components/#glyphicons</a></p>
+<p>3.bootstrap框架中是通过给元素加类名来实现的，格式为class:”glyphic 图标名” </p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/17/jade模板详解/" rel="next" title="jade模板详解">
+                <i class="fa fa-chevron-left"></i> jade模板详解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Mabeyol" />
+          <p class="site-author-name" itemprop="name">Mabeyol</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#bootstrap下载与引入"><span class="nav-number">1.</span> <span class="nav-text">bootstrap下载与引入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载："><span class="nav-number">1.1.</span> <span class="nav-text">下载：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引入："><span class="nav-number">1.2.</span> <span class="nav-text">引入：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bootstrap基本样式"><span class="nav-number">1.3.</span> <span class="nav-text">bootstrap基本样式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bootstrap应用"><span class="nav-number"></span> <span class="nav-text">bootstrap应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局样式"><span class="nav-number">1.</span> <span class="nav-text">全局样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题样式"><span class="nav-number">2.</span> <span class="nav-text">标题样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重置了h1-h6的默认样式"><span class="nav-number">2.1.</span> <span class="nav-text">重置了h1-h6的默认样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标题类名"><span class="nav-number">2.2.</span> <span class="nav-text">标题类名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#副标题small"><span class="nav-number">2.3.</span> <span class="nav-text">副标题small</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强调内容"><span class="nav-number">3.</span> <span class="nav-text">强调内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本对齐风格"><span class="nav-number">4.</span> <span class="nav-text">文本对齐风格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">5.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码风格"><span class="nav-number">6.</span> <span class="nav-text">代码风格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片样式"><span class="nav-number">7.</span> <span class="nav-text">图片样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图标样式"><span class="nav-number">8.</span> <span class="nav-text">图标样式</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mabeyol</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
