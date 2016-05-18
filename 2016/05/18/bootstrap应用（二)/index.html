@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="伪元素," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,30 +84,28 @@
 
 
 
-<meta name="description" content="CSS伪元素 CSS伪元素用于像某些选择器设置特殊效果
-伪元素语法：selector::first-line{ background:red; }
- 常用的伪元素：::before , ::after , ::first-line , ::first-letter , ::selector
-::before和::after伪元素::before是在元素之前添加内容，::after是在元素之后添加内">
+<meta name="description" content="表格样式table结构包括thead，tbody，tr，th，td
+####基础表格1.给表格设置了margin-bottom:20px以及设置单元内距
+2.在thead底部设置了2px的浅灰实线
+3.每个单元格顶部设置了一个1px的浅灰实线
+####附加表格    .table-striped：斑马线表格    .table-bordered：带边框的表格    .table-hover：鼠标悬">
 <meta property="og:type" content="article">
-<meta property="og:title" content="伪元素详解">
-<meta property="og:url" content="http://yoursite.com/2016/05/16/伪元素详解/index.html">
+<meta property="og:title" content="bootstrap应用（二)">
+<meta property="og:url" content="http://yoursite.com/2016/05/18/bootstrap应用（二)/index.html">
 <meta property="og:site_name" content="纳兹Natsu的博客">
-<meta property="og:description" content="CSS伪元素 CSS伪元素用于像某些选择器设置特殊效果
-伪元素语法：selector::first-line{ background:red; }
- 常用的伪元素：::before , ::after , ::first-line , ::first-letter , ::selector
-::before和::after伪元素::before是在元素之前添加内容，::after是在元素之后添加内">
-<meta property="og:image" content="http://i2.buimg.com/d277cebb217fe9fc.png">
-<meta property="og:image" content="http://i2.buimg.com/e96160bd0873397b.png">
-<meta property="og:image" content="http://i2.buimg.com/c842236576f97a01.png">
-<meta property="og:image" content="http://i2.buimg.com/53fd274c5d5c755a.png">
-<meta property="og:updated_time" content="2016-05-18T11:25:59.000Z">
+<meta property="og:description" content="表格样式table结构包括thead，tbody，tr，th，td
+####基础表格1.给表格设置了margin-bottom:20px以及设置单元内距
+2.在thead底部设置了2px的浅灰实线
+3.每个单元格顶部设置了一个1px的浅灰实线
+####附加表格    .table-striped：斑马线表格    .table-bordered：带边框的表格    .table-hover：鼠标悬">
+<meta property="og:updated_time" content="2016-05-18T13:48:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="伪元素详解">
-<meta name="twitter:description" content="CSS伪元素 CSS伪元素用于像某些选择器设置特殊效果
-伪元素语法：selector::first-line{ background:red; }
- 常用的伪元素：::before , ::after , ::first-line , ::first-letter , ::selector
-::before和::after伪元素::before是在元素之前添加内容，::after是在元素之后添加内">
-<meta name="twitter:image" content="http://i2.buimg.com/d277cebb217fe9fc.png">
+<meta name="twitter:title" content="bootstrap应用（二)">
+<meta name="twitter:description" content="表格样式table结构包括thead，tbody，tr，th，td
+####基础表格1.给表格设置了margin-bottom:20px以及设置单元内距
+2.在thead底部设置了2px的浅灰实线
+3.每个单元格顶部设置了一个1px的浅灰实线
+####附加表格    .table-striped：斑马线表格    .table-bordered：带边框的表格    .table-hover：鼠标悬">
 
 
 
@@ -125,7 +123,7 @@
   };
 </script>
 
-  <title> 伪元素详解 | 纳兹Natsu的博客 </title>
+  <title> bootstrap应用（二) | 纳兹Natsu的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -255,7 +253,7 @@
             
             
               
-                伪元素详解
+                bootstrap应用（二)
               
             
           </h1>
@@ -267,8 +265,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-16T16:32:43+08:00" content="2016-05-16">
-              2016-05-16
+            <time itemprop="dateCreated" datetime="2016-05-18T19:49:36+08:00" content="2016-05-18">
+              2016-05-18
             </time>
           </span>
 
@@ -295,20 +293,75 @@
       
 
       
-        <h3 id="CSS伪元素"><a href="#CSS伪元素" class="headerlink" title="CSS伪元素"></a>CSS伪元素</h3><p> CSS伪元素用于像某些选择器设置特殊效果</p>
-<p>伪元素语法：selector::first-line{ background:red; }</p>
-<p> 常用的伪元素：::before , ::after , ::first-line , ::first-letter , ::selector</p>
-<h3 id="before和-after伪元素"><a href="#before和-after伪元素" class="headerlink" title="::before和::after伪元素"></a>::before和::after伪元素</h3><p>::before是在元素之前添加内容，::after是在元素之后添加内容</p>
-<p>必须要添加content属性，无论伪元素是否有内容</p>
-<h4 id="before语法"><a href="#before语法" class="headerlink" title="::before语法:"></a>::before语法:</h4><p><img src="http://i2.buimg.com/d277cebb217fe9fc.png" alt=""></p>
-<h4 id="after语法"><a href="#after语法" class="headerlink" title="::after语法:"></a>::after语法:</h4><p><img src="http://i2.buimg.com/e96160bd0873397b.png" alt=""></p>
-<h3 id="first-line伪元素"><a href="#first-line伪元素" class="headerlink" title="::first-line伪元素"></a>::first-line伪元素</h3><p>选择元素的首行，并为其设置样式</p>
-<p>可使用属性:字体属性,颜色属性,背景属性,world-spacing,letter-spacing,text-decoration,vertical-align, text-transform,line-height,clear</p>
-<p>::first-line语法:</p>
-<p><img src="http://i2.buimg.com/c842236576f97a01.png" alt=""></p>
-<h3 id="first-letter伪元素"><a href="#first-letter伪元素" class="headerlink" title="::first-letter伪元素"></a>::first-letter伪元素</h3><p>选择每个元素的首字母，并为其设置样式</p>
-<p>::first-letter语法:</p>
-<p><img src="http://i2.buimg.com/53fd274c5d5c755a.png" alt=""></p>
+        <h3 id="表格样式"><a href="#表格样式" class="headerlink" title="表格样式"></a>表格样式</h3><p>table结构包括thead，tbody，tr，th，td</p>
+<p>####基础表格<br>1.给表格设置了margin-bottom:20px以及设置单元内距</p>
+<p>2.在thead底部设置了2px的浅灰实线</p>
+<p>3.每个单元格顶部设置了一个1px的浅灰实线</p>
+<p>####附加表格<br>    .table-striped：斑马线表格<br>    .table-bordered：带边框的表格<br>    .table-hover：鼠标悬停高亮的表格<br>    .table-condensed：紧凑型表格</p>
+<p>####响应式表格</p>
+<p>1.bootstrap提供了一个容器，并且此容器设置类名”.table-responsive”,此容器就具有响应式效果，然后将<table class="table">置于这个容器当中，这样表格也具有响应式效果</table></p>
+<p>2.当你的浏览器可视区域小于768px时，表格底部会出现水平滚动条。当你的浏览器可视区域大于768px时，表格底部水平滚动条会消失</p>
+<p>###表单属性</p>
+<p>####基础表单</p>
+<ol>
+<li><p>对于基础表单,Bootstrap并未对其做太多的定制性效果设计，仅仅对表单内的fieldset、legend、label标签进行了定制，主要将这些元素的margin、padding和border等进行了细化设置</p>
+</li>
+<li><p>input、select、texture等元素设置form-control类</p>
+<pre><code>宽度变成了100%
+设置了一个浅灰色（#ccc）的边框
+具有4px的圆角
+设置阴影效果，并且元素得到焦点之时，阴影和边框效果会有所变化
+设置了placeholder的颜色为#999
+</code></pre></li>
+<li><p>role是html5的属性;role=form告诉辅助设备(如屏幕阅读器)这个元素所扮演的角色是个表单;role=button告诉设备这是个按钮，可以点击。本质上是增强语义性,增强组件的可访问性、可用性</p>
+</li>
+<li><p>form-group产生一个margin的效果</p>
+</li>
+</ol>
+<p>####水平表单</p>
+<p>1.在<form>元素使用类名”form-horizontal”</form></p>
+<p>2.配合Bootstrap框架的网格系统</p>
+<p>####内联表单</p>
+<p>1.在<form>元素中添加类名”form-inline”即可</form></p>
+<p>2.label标签会导致input换行显示，解决方案是给label添加一个类名”sr-only”,标签没显示就是这个样式将标签隐藏了<br>！！！如果没有为输入控件设置label标签，屏幕阅读器将无法正确识别。这也是bootstrap的另一个优点之处，为残障人员进行了一定的考虑</p>
+<p>###form</p>
+<p>####input</p>
+<p>1.必须带有type,多使用form-control类</p>
+<pre><code>input-sm:让控件比正常大小更小
+input-lg:让控件比正常大小更大
+不设置就是正常大小
+</code></pre><p>2.禁用属性:disabled</p>
+<p>3.默认内容placeholder</p>
+<p>####select<br>默认选择一个选项，多使用form-control;多行设置设置multipe属性</p>
+<p>####textarea<br>设置row可定义其高度，设置cols可以定义其宽度。但如果textarea元素中添加了类名”form-control”类名，则无需设置cols属性</p>
+<p>####按钮<br>在bootstrap框架中的按钮都是采用&lt;button&gt;来实现的；</p>
+<p>.btn类还支持a标签，type-submit的input标签 </p>
+<pre><code>btn-primary主要按钮
+btn-success成功按钮
+btn-warning警告按钮
+btn-danger危险按钮
+btn-link链接按钮
+</code></pre><p>按钮大小:</p>
+<pre><code>.bth-lg 大型按钮
+.btn-sm 小型按钮
+.btn-xs 超小型按钮
+.btn-block 块级按钮
+</code></pre><p>####单选框，复选框</p>
+<p>！！！日常开发最头痛的是控件与文字对其的问题，bootstrap无需关心这个问题</p>
+<ol>
+<li><p>如果checkbox需要水平排列，只需要在label标签上添加类名“checkbox-inline”</p>
+</li>
+<li><p>如果radio需要水平排列，只需要在label标签上添加类名“radio-inline”</p>
+</li>
+</ol>
+<p>####网格系统</p>
+<p>实现原理：</p>
+<p>网格系统的实现原理非常简单，仅仅是通过定义容器大小，平分12份(也有平分成24份或32份，但12份是最常见的)，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统。Bootstrap框架中的网格系统就是将容器平分成12份</p>
+<p>工作原理：</p>
+<p>数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)</p>
+<p>在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数，比如12</p>
+<p>具体内容应当放置在列容器（column）之内，而且只有列（column）才可以作为行容器(.row)的直接子元素</p>
+<p>通过设置内距（padding）从而创建列与列之间的间距。然后通过为第一列和最后一列设置负值的外距（margin）来抵消内距(padding)的影响</p>
 
       
     </div>
@@ -328,28 +381,18 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/伪元素/" rel="tag">#伪元素</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/12/hexo线上博客的搭建/" rel="next" title="hexo线上博客的搭建">
-                <i class="fa fa-chevron-left"></i> hexo线上博客的搭建
+              <a href="/2016/05/18/bootstrap应用(一)/" rel="next" title="bootstrap应用（一） ">
+                <i class="fa fa-chevron-left"></i> bootstrap应用（一） 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/16/gulp详解/" rel="prev" title="gulp详解">
-                gulp详解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -456,7 +499,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS伪元素"><span class="nav-number">1.</span> <span class="nav-text">CSS伪元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#before和-after伪元素"><span class="nav-number">2.</span> <span class="nav-text">::before和::after伪元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#before语法"><span class="nav-number">2.1.</span> <span class="nav-text">::before语法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#after语法"><span class="nav-number">2.2.</span> <span class="nav-text">::after语法:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#first-line伪元素"><span class="nav-number">3.</span> <span class="nav-text">::first-line伪元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#first-letter伪元素"><span class="nav-number">4.</span> <span class="nav-text">::first-letter伪元素</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#表格样式"><span class="nav-number">1.</span> <span class="nav-text">表格样式</span></a></li></ol></div>
             
           </div>
         </section>
