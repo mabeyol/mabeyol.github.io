@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -243,6 +243,452 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/31/面向对象基础/" itemprop="url">
+                  面向对象基础
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T10:55:09+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="什么是面向对象"><a href="#什么是面向对象" class="headerlink" title="什么是面向对象"></a>什么是面向对象</h3><p>面向对象是一种软件开发的编程方式，与面向过程是两种不同的编程方式</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>面向过程：所有功能都是在需要使用的时候开发</p>
+<p>面向对象：在正式开发之前，就先把所有需要使用的功能都开发好，并以属性或者方法的形式存放在一个对象中，在实际开发的时候根据需要来调用写好的功能</p>
+<p>JavaScript是最不像面向对象的面向对象语言，因为JavaScript中没有类的概念，也不能像传统面向对象语言那样去实现封装、继承和多态。</p>
+<h3 id="面向对象模式"><a href="#面向对象模式" class="headerlink" title="面向对象模式"></a>面向对象模式</h3><h4 id="面向对象的工厂模式"><a href="#面向对象的工厂模式" class="headerlink" title="面向对象的工厂模式"></a>面向对象的工厂模式</h4><pre><code>function person(name,age){
+    var obj={};
+    obj.name=name;
+    obj.age=age;
+    obj.say=function(){
+        alert(&apos;我叫&apos;+this.name+&apos;，我今年&apos;+this.age+&apos;岁。&apos;);
+    };
+    return obj;
+}
+var xiaoming=person(&apos;小明&apos;,18);
+var xiaohong=person(&apos;小红&apos;,16);
+xiaoming.say();
+xiaohong.say();
+</code></pre><p>1.工厂方式写法与面向过程写法相同，相对比较好了解</p>
+<p>2.工厂方式的缺点在于所有属性和方法都会被重复创建    </p>
+<p>####面向对象的构造函数模式<br>    function Person(name,age){<br>        this.name = name;<br>        this.age = age;<br>        this.say = function(){<br>            alert(‘我叫’+this.name+’,我今年’+this.age+’岁。’)；<br>        };<br>    }<br>    var xiaoming = new Person(‘小明’,18);<br>    var xiaohong = new Person(‘小红’,16);<br>    xiaoming.say();<br>    xiaohong.say();</p>
+<h5 id="构造函数：用来构建对象的函数"><a href="#构造函数：用来构建对象的函数" class="headerlink" title="构造函数：用来构建对象的函数"></a>构造函数：用来构建对象的函数</h5><p>1.为了区别普通函数，构造函数的函数名首字母规定应该为大写。</p>
+<p>2.构造函数必须使用new运算符来调用执行。</p>
+<h5 id="普通函数与构造函数中的this。"><a href="#普通函数与构造函数中的this。" class="headerlink" title="普通函数与构造函数中的this。"></a>普通函数与构造函数中的this。</h5><p>普通函数的this与调用时的上下文环境有关。</p>
+<p>构造函数中的this为一个空的对象，并且会作为return的默认值。</p>
+<h5 id="JavaScript内置提供的构造函数"><a href="#JavaScript内置提供的构造函数" class="headerlink" title="JavaScript内置提供的构造函数"></a>JavaScript内置提供的构造函数</h5><p>String() /  Array() /  Date() / Number() / Boolean() / Object() / Function() / RegExp()</p>
+<h4 id="构造函数-原型模式"><a href="#构造函数-原型模式" class="headerlink" title="构造函数+原型模式"></a>构造函数+原型模式</h4><pre><code>function Person(name,age){
+    this.name=name;
+    this.age=age;
+}
+Person.prototype.say=function(){
+    alert(&apos;我叫&apos;+this.name+&apos;,我今年&apos;+this.age+&apos;岁。&apos;);
+};
+var xiaoming=new Person(&apos;小明&apos;,18);
+var xioahong=new Person(&apos;小红&apos;,16);
+xiaoming.say();
+xiaohong.say();
+</code></pre><p>原型是函数的一个特有属性。</p>
+<p>1.原型本身是一个对象。</p>
+<p>2.原型对象上的属性和方法可以被实例对象使用。</p>
+<p>普通对象中的属性与原型中的属性的区别</p>
+<p>1.普通对象的属性：只能在拥有属性的对象中使用。</p>
+<p>2.原型对象的属性：所有通过同一个构造函数创建的对象中都可以使用。</p>
+<p>原型链：原型链是指对象在访问属性或方法时的查找方式。</p>
+<p>1.当访问一个对象的属性或方法时，会先在对象自身上查找属性或方法是否存在，如果存在就使用对象自身的属性或方法。如果不存在就去创建对象的构造函数的原型对象中查找，以此类推，直到找到为止。如果到顶层对象中还找不到，则返回undefined.</p>
+<p>2.原型链最顶层为Object构造函数的prototype原型对象，给Object.prototype添加属性或方法可以被除null和undefined之外的所有数据类型对象使用。</p>
+<h4 id="constructor与instanceof"><a href="#constructor与instanceof" class="headerlink" title="constructor与instanceof"></a>constructor与instanceof</h4><p>constructor属性(举例:nodeType)</p>
+<p>通过constructor属性可以查看一个实例对象是由哪一个构造函数创建出来的。</p>
+<ol>
+<li><p>constructor是构造函数的prototype中的属性,它的值为构造函数本身</p>
+</li>
+<li><p>constructor属性可以被修改</p>
+</li>
+</ol>
+<p>instanceof运算符</p>
+<p>instanceof运算符用来查看一个实例对象是不是由某个构造函数创建出来的</p>
+<h4 id="面向对象版选项卡"><a href="#面向对象版选项卡" class="headerlink" title="面向对象版选项卡"></a>面向对象版选项卡</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;style&gt;
+              #tab {width: 400px;border: 5px solid #333;background: #9cf;}
+              #tab input {font-size: 30px;background: #fff;}
+              #tab div {height: 200px;background: #eee;display: none;font-size: 80px;}
+              #tab input.active {background: red;}
+              #tab div.active {display: block;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt; 
+        &lt;div id=&quot;tab&quot;&gt;
+             &lt;input class=&quot;active&quot; type=&quot;button&quot; value=&quot;选项一&quot; /&gt;
+             &lt;input type=&quot;button&quot; value=&quot;选项二&quot; /&gt;
+             &lt;input type=&quot;button&quot; value=&quot;选项三&quot; /&gt;
+             &lt;div class=&quot;active&quot;&gt;0000001&lt;/div&gt;
+             &lt;div&gt;0000002&lt;/div&gt;
+             &lt;div&gt;0000003&lt;/div&gt;
+         &lt;/div&gt;
+         &lt;script&gt;
+            function Tab(id){  
+                  this.oTab = document.getElementById(id);
+                  this.aBtn = this.oTab.getElementsByTagName(&apos;input&apos;);
+                  this.aDiv = this.oTab.getElementsByTagName(&apos;div&apos;);
+                  var _this = this;
+                 for(var i=0; i&lt;this.aBtn.length; i++){
+                    this.aBtn[i].index = i;
+                    this.aBtn[i].onclick = function(){
+                          _this.click(this.index);         
+                        };
+                  }
+
+            }
+
+            Tab.prototype.click = function(index){
+                  for(var i=0; i&lt;this.aBtn.length; i++){
+                    this.aBtn[i].className = &apos;&apos;;
+                    this.aDiv[i].className = &apos;&apos;;
+                  }
+                  this.aBtn[index].className = &apos;active&apos;;
+                  this.aDiv[index].className = &apos;active&apos;;
+            };
+
+            new Tab(&apos;tab&apos;); 
+
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>将普通版改成面向对象版：</p>
+<p>1.所有变量改成对象的属性</p>
+<p>2.把所有的函数改成构造函数的原型上的方法</p>
+<p>3.方法中不要有函数嵌套</p>
+<p>#####递归函数<br>依次弹出1-10</p>
+<pre><code>var i=0;
+fucntion fn1(){
+    alert(i++);
+    if(i&lt;=10) fn1();
+}
+</code></pre><p>计算从1加到n的和</p>
+<pre><code>function fn2(n){
+    if(n==1) return1;
+    return fn2(n-1)+n;
+}
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/23/JavaScript语法特性面试题/" itemprop="url">
+                  JavaScript语法特性面试题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-23T19:35:32+08:00" content="2016-05-23">
+              2016-05-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>####1<br>    function Foo() {<br>        getName = function () { alert (1); };<br>        return this;<br>    }<br>    Foo.getName = function () { alert (2);};<br>    Foo.prototype.getName = function () { alert (3);};<br>    var getName = function () { alert (4);};<br>    function getName() { alert (5);}</p>
+<pre><code>//请写出以下输出结果
+1.Foo.getName();
+2.getName();
+3.Foo().getName();
+4.getName();
+5.new Foo.getName();
+6.new Foo().getName();
+7.new new Foo().getName();
+</code></pre><p>答案是：</p>
+<pre><code>1. 2 
+2. 4
+3. 1
+4. 1
+5. 2
+6. 3
+7. 3
+</code></pre><p>详细解析<br>先将这几个函数按优先级排列</p>
+<pre><code>function Foo(){
+    getName = function (){ alert (1); };
+    return this;
+};
+
+function getName(){
+    alert(5);
+};
+
+var getName;
+
+Foo.getName = function () { 
+    alert (2);
+};
+
+Foo.prototype.getName = function () { 
+    alert (3);
+};
+
+getName = function() { 
+    alert (5);
+}
+</code></pre><p>1.第一问的 Foo.getName 自然是访问Foo函数上存储的静态属性，自然是2</p>
+<p>2.直接调用getName函数，而var getName = function(){ alert(4); }中的变量声明提升,<br>得出“var getName;getName=function(){ alert(4); }”,后面的覆盖前面的getName函数，故此题为4</p>
+<p>3.先将Foo()函数运行，其中的return值为this，this指向window,所以第3题就等于window.getName(),Foo函数运行后其中的getName函数在全局中出现，放在最后，所以此题弹出值为1</p>
+<p>4.直接调用getName函数，与上题相同，弹出1</p>
+<p>5.new Foo.getName(),此处考察的是js运算符优先级的问题，.的运算级高于new操作，于是为new（Foo.getName）(),所以弹出2</p>
+<p>6.new Foo().getName(),运算符优先级（）高于new，所以为（new.Foo()）.getName()</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/23/bootstrap详解-三/" itemprop="url">
+                  bootstrap详解(三)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-23T19:33:58+08:00" content="2016-05-23">
+              2016-05-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/18/bootstrap应用（二)/" itemprop="url">
                   bootstrap应用（二)
                 </a>
@@ -256,7 +702,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T19:49:36+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -412,7 +858,7 @@ btn-link链接按钮
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-18T16:57:31+08:00" content="2016-05-18">
               2016-05-18
             </time>
@@ -590,7 +1036,7 @@ text-justify：两端对齐
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-17T16:14:17+08:00" content="2016-05-17">
               2016-05-17
             </time>
@@ -706,7 +1152,7 @@ text-justify：两端对齐
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-16T19:11:18+08:00" content="2016-05-16">
               2016-05-16
             </time>
@@ -819,7 +1265,7 @@ text-justify：两端对齐
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-16T16:32:43+08:00" content="2016-05-16">
               2016-05-16
             </time>
@@ -926,7 +1372,7 @@ text-justify：两端对齐
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-12T09:50:34+08:00" content="2016-05-12">
               2016-05-12
             </time>
@@ -1042,7 +1488,7 @@ text-justify：两端对齐
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-11T20:51:26+08:00" content="2016-05-11">
               2016-05-11
             </time>
@@ -1166,8 +1612,8 @@ text-justify：两端对齐
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -1177,7 +1623,7 @@ text-justify：两端对齐
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               </a>
             </div>
           
@@ -1221,7 +1667,7 @@ text-justify：两端对齐
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
